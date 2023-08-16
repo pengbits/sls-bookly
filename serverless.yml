@@ -1,0 +1,44 @@
+service: bookly    
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: us-east-1
+  # To load environment variables externally
+  # rename env.example to .env and uncomment
+  # the following line. Also, make sure to not
+  # commit your .env.
+  #
+  #environment:
+  #  SAMPLE_ENV_VAR: ${env:SAMPLE_ENV_VAR}
+plugins:
+  - serverless-webpack
+  - serverless-dotenv-plugin
+# serverless optimization
+# package:
+#   individually: true
+
+# serverless-webpack configuration
+# Enable auto-packing of external modules
+# custom:
+#   webpack:
+#     webpackConfig: ./webpack.config.js 
+#     includeModules: true
+      
+functions:
+  list-authors:
+    handler: 'handler.list'
+    events:
+      - http:
+          path: authors
+          method: get
+
+  show-author:
+    handler: 'handler.show'
+    events:
+      - http:
+          path: "authors/{id}"
+          method: get
+custom:
+  webpack:
+    webpackConfig: 'webpack.server.config.js'
