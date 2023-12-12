@@ -51,7 +51,7 @@
   },
   "scripts": {
     "build": "sls webpack",
-    "mongo": "mongod --config /usr/local/etc/mongod.conf",
+    "mongo": "mongod --config /opt/homebrew/etc/mongod.conf",
     "invoke-list-authors": "./scripts/invoke/list-authors.sh",
     "invoke-show-author": "./scripts/invoke/show-author.sh",
     "test": "EXECUTION_CONTEXT=express jest --watch",
