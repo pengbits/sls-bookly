@@ -5,6 +5,7 @@
   "private": "true",
   "main": "authors.js",
   "dependencies": {
+    "@babel/preset-react": "^7.23.3",
     "axios": "^0.19.2",
     "bluebird": "^3.7.2",
     "body-parser": "^1.19.0",
@@ -28,7 +29,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.0",
+    "@babel/core": "^7.23.6",
     "@babel/node": "^7.8.7",
     "@babel/preset-env": "^7.9.5",
     "babel-loader": "^8.1.0",
@@ -39,6 +40,7 @@
     "jest": "^25.3.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.0",
+    "nodemon": "^3.0.2",
     "sass-loader": "^8.0.2",
     "serverless-dotenv-plugin": "^2.4.2",
     "serverless-webpack": "^5.3.1",
